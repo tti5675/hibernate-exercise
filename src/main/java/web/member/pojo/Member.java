@@ -1,12 +1,11 @@
 package web.member.pojo;
 
 import java.sql.Timestamp;
-
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
 import core.pojo.Core;
 
 
@@ -20,13 +19,13 @@ public class Member extends Core {
 	private String password;
 	private String nickname;
 	private Boolean pass;
-	
+	@Column(name= "ROLE_ID")
 	private Integer roleId;
 	private String creator;
-	
+	@Column(name= "CREATED_DATE")
 	private Timestamp createdDate;
 	private String updater;
-	
+	@Column(name= "LAST_UPDATED_DATE")
 	private Timestamp lastUpdatedDate;
 
 	public Member() {
